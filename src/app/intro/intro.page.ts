@@ -19,54 +19,54 @@ export class IntroPage  {
   
   slides = [
     {
-      title: "titulo 1",
-      subtitle: "sub title 1",
+      title: "Crossover",
+      subtitle: "Artistas",
       icon: "musical-notes-outline",
       img: "assets/images/slide1.jpg",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      description: "Artistas Latinos"
     },
     {
-      title: "titulo 2",
-      subtitle: "sub title 2",
+      title: "Rock",
+      subtitle: "Artistas",
       icon: "musical-note-outline",
       img: "assets/images/slide2.jpg",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." 
+      description: "Clasicos del Rock" 
     },
     {
-      title: "titulo 3",
-      subtitle: "sub title 3",
+      title: "Jazz",
+      subtitle: "Artistas",
       icon: "play-outline",
       img: "assets/images/slide3.jpg",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."  
+      description: "Exponentes del Jazz"  
     },
     {
-      title: "titulo 4",
-      subtitle: "sub title 4",
-      icon: "musical-notes-outline",
+      title: "Pop",
+      subtitle: "Artistas",
+      icon: "musical-notes",
       img: "assets/images/slide4.jpg",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      description: "Pop Latino"  
     }
   ]
-  constructor(private router: Router, private storage:Storage) {
+  constructor(private router: Router, private storage:Storage) { 
     this.storage.create();
   }
 
-  ngOnInit(): void{
-    this.showe().then( x => {
-      if (x){
+  ngOnInit(): void {
+    this.showe().then( x =>{
+      //console.log(x)
+      if (x) {
         this.router.navigateByUrl("/home")
       }
     })
-  }
+  } 
 
   async showe() {
-    const show = await this.storage.get("isIntroShowed");
-    return show
-    
+    const show = await this.storage.get("isIntroShowed")
+    return show;
   }
 
   finish() {
-    this.storage.set("isIntroShowed", true);
+    this.storage.set( "isIntroShowed", true);
     this.router.navigateByUrl("/home");
   }
 

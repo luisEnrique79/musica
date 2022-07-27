@@ -1,44 +1,62 @@
 ion-button{
-    --background: red;
-    --color: white;
-  }
-  ion-slides {
-    margin: 20px 20px 20px 20px;
-    height: 100%;
-    background-color: white;
-    max-width: 800px;
-  }
-  .swiper-slide{
-    display:block;
-    margin-bottom:60px;
-    background-color:var(--slide-color-background); //variable crear
-  }
-  
-  ion-slide > h1 {
-    margin: 20px 20px 20px 20px;
-    color: maroon;
-    border-color: black;
-    border-style: dashed;
-  
-  }
-  
-  ion-slide > p {
-    padding: 20px 20px 20px 20px;
-    color: maroon;
-    font-style: italic;
-    font-size: 22px;
-    border-color: black;
-    border-style: dashed;
-  }
-  
-  ion-slide > ion-icon[name="close-circle"]{
-    float: right;
-    color: black;
-    font-size: 30px;
-  }
-  
-  ion-slide > ion-icon[name="musical-note-outline"]{
-    float: center;
-    color: rgb(143, 28, 28);
-    font-size: 20px;
-  }
+  --background: rgb(97, 4, 55);
+  --color: white;
+}
+ion-slides {
+  margin: 20px 20px 20px 20px;
+  height: 100%;
+  background-color: white;
+  max-width: 800px;
+}
+.swiper-slide{
+  display:block;
+  margin-bottom:60px;
+  background-color:var(--slide-color-background); //utilice variable creada
+}
+
+ion-slide > h1,h2 {
+  margin: 20px 20px 20px 20px;
+  color: whitesmoke;
+  border-color: black;
+  border-style: dashed;
+
+}
+
+ion-slide > p {
+  padding: 20px 20px 20px 20px;
+  color: whitesmoke;
+  font-style: italic;
+  font-size: 22px;
+  border-color: black;
+  border-style: dashed;
+}
+
+ion-slide > ion-icon[name="close-circle"]{
+  float: right;
+  color: black;
+  font-size: 30px;
+}
+
+ion-slide > ion-icon[name="musical-notes-outline"]{
+  float: center;
+  color: yellow;
+  font-size: 30px;
+}
+
+ion-slide > ion-icon[name="musical-note-outline"]{
+  float: center;
+  color:  yellow;
+  font-size: 30px;
+}
+
+ion-slide > ion-icon[name="play-outline"]{
+  float: center;
+  color: yellow;
+  font-size: 30px;
+}
+
+ion-slide > ion-icon[name="musical-notes"]{
+  float: center;
+  color: yellow;
+  font-size: 30px;
+}
